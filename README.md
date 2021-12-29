@@ -43,5 +43,6 @@ I installed an apache2 server on my Raspberry Pi and changed the owner of the va
 ```
 sudo apt-get install apache2
 sudo chown -R pi:pi /var/www/
+```
 
 Then I used SFTP to transfer my dist folder to the Raspberry (var/www/html folder).
