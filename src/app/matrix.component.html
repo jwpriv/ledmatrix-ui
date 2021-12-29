@@ -1,0 +1,10 @@
+<div class="matrix-container">
+    <ng-container *ngFor="let row of counter(rowCount); let rIndex = index">
+        <ng-container *ngFor="let col of counter(columnCount); let cIndex = index">
+                <app-pixel [row]="rIndex" [col]="cIndex"></app-pixel>
+        </ng-container>
+    </ng-container>
+</div>
+<button (click)="clearMatrix()">CLEAR</button>
+<button (click)="saveMatrix()">SAVE</button>
+<input type="file" (change)="onFileSelected($event)" #file>

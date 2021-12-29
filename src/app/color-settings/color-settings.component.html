@@ -1,0 +1,5 @@
+<div class="color-container" *ngFor="let color of this.settings.colors | keyvalue; trackBy:identify">
+       <input [style.background]="color.value" [colorPicker]="color.value" (colorPickerChange)="colorChanged(color.key, $event)" />
+       <button (click)="addColor()">ADD</button>
+       <button (click)="setColor(color.value)">SELECT</button>
+</div>
